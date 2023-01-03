@@ -1,0 +1,167 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.main
+{
+    width: 100%;
+    height: 100vh;
+    background: #181515;
+}
+.inner_main
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hoverer_card
+{
+    width: 99%;
+    height: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card
+{
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    background-color: #181515;
+    box-shadow: rgba(138,138,138,0.897) 0 0 15px 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.card_img
+{
+
+    margin-top: 8px;
+    position: relative;
+    width: 96%;
+    height: 40%;
+    z-index: 10;
+
+}
+.card_img>img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card_content
+{
+    position: relative;
+    z-index: 10;
+    height: 30%;
+}
+.card_img::before
+{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #181515;
+    z-index: 5;
+    bottom: -80%;
+    left: 0;
+    transform: skewY(-10deg);
+}
+.card_content>h2{
+    font-size: 35px;
+    color: #efefef;
+    margin: 0;
+    margin-top: 15px;
+}
+.card_content>p{
+    margin: 0;
+    text-align: center;
+    margin-top: 15px;
+    color: #efefef;
+    font-size: 18px;
+}
+@keyframes spinDiv
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.social_media
+{
+    position: relative;
+    width: 100%;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    transition: all 0.3s ease-in-out;
+}
+.social_media>span{
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.social_media>span>a
+{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.social_media>span:nth-child(1):hover
+{
+    border: 1px solid rgb(43,52,177);
+    transition: all 0.3s ease-in-out;
+}
+.social_media>span:nth-child(2):hover
+{
+    border: 1px solid rgb(74,147,235);
+    transition: all 0.3s ease-in-out;
+}
+.social_media>span:nth-child(3):hover
+{
+    border: 1px solid rgb(12,41,207);
+    transition: all 0.3s ease-in-out;
+}
+
+.social_media>span:nth-child(1):hover>a
+{
+    color: rgb(43,52,177);
+    transition: all 0.3s ease-in-out;
+}
+.social_media>span:nth-child(2):hover>a
+{
+    color: rgb(74,147,235);
+    transition: all 0.3s ease-in-out;
+}
+.social_media>span:nth-child(3):hover>a
+{
+    color: rgb(12,41,207);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:768px)
+{
+    .main
+    {
+        height: 100%;
+        padding-bottom: 20px;
+    }
+}
